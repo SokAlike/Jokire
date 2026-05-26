@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="VeloQ gamma ai">
+  <defs>
+    <radialGradient id="bgGlow" cx="66%" cy="26%" r="72%">
+      <stop offset="0" stop-color="#6519ff" stop-opacity=".46"/>
+      <stop offset=".42" stop-color="#2a0068" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#150033"/>
+    </radialGradient>
+    <linearGradient id="candle" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ff4dfd"/>
+      <stop offset=".48" stop-color="#b629ff"/>
+      <stop offset="1" stop-color="#4c3dff"/>
+    </linearGradient>
+    <linearGradient id="arrow" x1="0" x2="1" y1="1" y2="0">
+      <stop offset="0" stop-color="#7b2cff"/>
+      <stop offset=".55" stop-color="#ff2eea"/>
+      <stop offset="1" stop-color="#ff62fd"/>
+    </linearGradient>
+    <filter id="pinkGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feColorMatrix in="blur" values="1 0 0 0 1 0 0 0 0 .05 0 0 1 0 1 0 0 0 .8 0" result="color"/>
+      <feMerge>
+        <feMergeNode in="color"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity=".32"/>
+    </filter>
+  </defs>
+  <rect width="256" height="256" fill="url(#bgGlow)"/>
+  <circle cx="164" cy="70" r="70" fill="#8a2dff" opacity=".12"/>
+  <g filter="url(#pinkGlow)">
+    <path d="M174 60 L190 44 L190 34 L215 57 L190 82 L190 70 L158 101" fill="url(#arrow)"/>
+    <rect x="92" y="102" width="22" height="49" rx="6" fill="url(#candle)"/>
+    <rect x="127" y="87" width="22" height="63" rx="6" fill="url(#candle)"/>
+    <rect x="162" y="65" width="23" height="72" rx="6" fill="url(#candle)"/>
+    <path d="M103 88v-10M103 161v17M138 72v-15M138 159v17M173 50v-15M173 147v18" stroke="#ff4dfd" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g opacity=".82" filter="url(#pinkGlow)">
+    <path d="M102 183v10M118 174v19M134 164v29M150 153v40M166 140v53M182 128v65" stroke="#7c3cff" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#softShadow)">
+    <text x="28" y="203" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="900" fill="#fff">VeloQ</text>
+    <text x="142" y="202" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="600" fill="#c77dff">gamma ai</text>
+  </g>
+</svg>
