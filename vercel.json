@@ -1,0 +1,19 @@
+{
+  "rewrites": [
+    { "source": "/api.php",    "destination": "/api/gateway" },
+    { "source": "/api.php/(.*)", "destination": "/api/gateway" }
+  ],
+  "functions": {
+    "api/gateway.js": {
+      "maxDuration": 30
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate" }
+      ]
+    }
+  ]
+}
